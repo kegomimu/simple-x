@@ -41,7 +41,7 @@ struct ContactListNavLink: View {
         .alert(item: $alert) { $0.alert }
         .actionSheet(item: $actionSheet) { $0.actionSheet }
         .sheet(item: $sheet) {
-            if #available(iOS 16.0, *) {
+            if #available(iOS 16, *) {
                 $0.content
                     .presentationDetents([.fraction(0.4)])
             } else {
