@@ -58,11 +58,11 @@ struct ContentView: View {
     }
 
     var body: some View {
-        if #available(iOS 16.0, *) {
+        if #available(iOS 16, *) {
             allViews()
                 .scrollContentBackground(.hidden)
         } else {
-            // on iOS 15 scroll view background disabled in SceneDelegate
+            // on iOS 15 and below scroll view background disabled in SceneDelegate
             allViews()
         }
     }
